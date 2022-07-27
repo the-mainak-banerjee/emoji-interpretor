@@ -21,7 +21,7 @@ export default function App() {
   );
 
   const handleInputChange = (e) => {
-    const userEmoji = e.target.value;
+    const userEmoji = e.target.value.trim();
     setUserEmojiInput(userEmoji);
 
     if (userEmoji in emojiDb) {
@@ -37,13 +37,14 @@ export default function App() {
 
   return (
     <div className="App">
-      <section>
+      <section className="header">
         <h2>Emoji Camp</h2>
         <p>Find the meaning of any emoji</p>
       </section>
       <input
         type="text"
         placeholder="put an emoji here to know the meaning"
+        className="userInput"
         value={userEmojiInput}
         onChange={handleInputChange}
       />
@@ -52,9 +53,17 @@ export default function App() {
         <h5>{emojiMeaning}</h5>
       </div>
 
-      {allEmojis.map((emoji) => {
-        return <span onClick={() => handleEmojiClick(emoji)}> {emoji} </span>;
-      })}
+      <div>
+        <p>Click on the emojis below to know their meaning </p>
+        {allEmojis.map((emoji) => {
+          return (
+            <span className="emojiList" onClick={() => handleEmojiClick(emoji)}>
+              {" "}
+              {emoji}{" "}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 }
