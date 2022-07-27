@@ -8,7 +8,12 @@ const emojiDb = {
   "💨": "Dashing away",
   "🦧": "Orangutan",
   "🐮": "Cow Face",
-  "🐽": "Pig Nose"
+  "🐽": "Pig Nose",
+  "🐺": "Wolf",
+  "🦄": "Unicorn",
+  "🦏": "Rhinoceros",
+  "🦦": "Otter",
+  "🦃": "Turkey"
 };
 
 const allEmojis = Object.keys(emojiDb);
