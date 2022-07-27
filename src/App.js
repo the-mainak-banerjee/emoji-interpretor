@@ -50,7 +50,7 @@ export default function App() {
       />
       <div>
         <p>{userEmojiInput}</p>
-        <h5>{emojiMeaning}</h5>
+        <h3>{emojiMeaning}</h3>
       </div>
 
       <div>
