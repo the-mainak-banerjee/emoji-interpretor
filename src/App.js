@@ -17,7 +17,6 @@ const emojiDb = {
 };
 
 const allEmojis = Object.keys(emojiDb);
-console.log(allEmojis);
 
 export default function App() {
   const [userEmojiInput, setUserEmojiInput] = useState("");
